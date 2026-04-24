@@ -3,5 +3,5 @@
 public interface cuentaBancariaTAD {
     double depositar(double monto);
     boolean retirar(double monto);
-    double consultarSaldo(double monto);
+    double consultarSaldo();
 }

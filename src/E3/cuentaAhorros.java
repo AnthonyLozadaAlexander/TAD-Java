@@ -10,11 +10,18 @@ public class cuentaAhorros implements cuentaBancariaTAD {
 
     @Override
     public double depositar(double monto) {
+        if(monto <= 0){
+            throw new RuntimeException("Monto no valido");
+        }
+
         return saldo = saldo + monto;
     }
 
     @Override
     public boolean retirar(double monto) {
+        if(monto <= 0){
+            throw new RuntimeException("Monto no valido");
+        }
         if(monto > saldo){
             throw new RuntimeException("Saldo insuficiente");
         }
@@ -24,7 +31,7 @@ public class cuentaAhorros implements cuentaBancariaTAD {
     }
 
     @Override
-    public double consultarSaldo(double monto) {
+    public double consultarSaldo() {
         return saldo;
     }
 }

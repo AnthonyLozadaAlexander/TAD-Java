@@ -8,6 +8,10 @@ public class cuentaAhorros implements cuentaBancariaTAD {
         this.saldo = saldo;
     }
 
+    public double getSaldo(){
+        return saldo;
+    }
+
     @Override
     public double depositar(double monto) {
         if(monto <= 0){
@@ -34,4 +38,5 @@ public class cuentaAhorros implements cuentaBancariaTAD {
     public double consultarSaldo() {
         return saldo;
     }
+
 }
